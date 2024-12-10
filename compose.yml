@@ -20,5 +20,17 @@ services:
       - db
     tty: true
     stdin_open: true
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    command: yarn dev --host
+    ports:
+      - 5173:5173
+    volumes:
+      - ./frontend:/react_app
+    depends_on:
+      - app
+    stdin_open: true
 volumes:
   mysql_database:
