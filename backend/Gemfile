@@ -1,5 +1,9 @@
 source "https://rubygems.org"
 
+# CORS
+gem 'rack-cors'
+
+# --- rails new ---
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.2"
 # Use mysql as the database for Active Record
